@@ -1,0 +1,26 @@
+package rules
+import com.offer.droolEngine.entities.Order;
+
+rule "10% Discount for HDFC Customers when price > 10000"
+when
+    $card : Order(cardType == "HDFC" && price > 10000)
+then
+    $card.setDiscount(10);
+    System.out.println("Applying 10% discount to HDFC customer");
+end
+
+rule "8% Discount for SBI Customers when price > 10000"
+when
+    $card : Order(cardType == "SBI" && price > 10000)
+then
+    $card.setDiscount(8);
+    System.out.println("Applying 8% discount to SBI customer");
+end
+
+rule "15% Discount for ICICI Customers when price > 10000"
+when
+    $card : Order(cardType == "ICICI" && price > 10000)
+then
+    $card.setDiscount(15);
+    System.out.println("Applying 15% discount to ICICI customer");
+end
