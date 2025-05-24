@@ -18,7 +18,7 @@ public class DroolConfig {
 
     private KieFileSystem getKieFileSystem() {
         KieFileSystem kieFileSystem = KieServices.get().newKieFileSystem();
-        kieFileSystem.write(ResourceFactory.newClassPathResource("rules/offers.drl"));
+        kieFileSystem.write(ResourceFactory.newClassPathResource("rules/discount_rules.xls"));
         return kieFileSystem;
     }
 
